@@ -8,7 +8,7 @@ from pydantic import BaseModel
 app = FastAPI()
 
 class Item(BaseModel):
-    name: int = None
+    a: int = None
     b: int = None
 
 # http://localhost:8080/test/a=1/b=2
