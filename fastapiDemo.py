@@ -3,13 +3,9 @@
 #   uvicorn     0.15.0
 
 from fastapi import FastAPI
-from pydantic import BaseModel
+from vo import Item
 
 app = FastAPI()
-
-class Item(BaseModel):
-    a: int = None
-    b: int = None
 
 # http://localhost:8080/test/a=1/b=2
 @app.get('/test/a={a}/b={b}')
